@@ -1,0 +1,130 @@
+_type: export
+__export_format: 4
+__export_date: 2022-03-21T12:40:07.969Z
+__export_source: insomnia.desktop.app:v2022.1.1
+resources:
+  - _id: req_d862b07971ba4a5da85aa594f25a2b1c
+    parentId: wrk_3b1665ec8df04d0fb9f8b6ca2de3ac82
+    modified: 1646819656335
+    created: 1646819654862
+    url: https://data.cdn.development.srse.w4a.tv/channel/full.json
+    name: List all TV Channels
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1646819654862
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_3b1665ec8df04d0fb9f8b6ca2de3ac82
+    parentId: null
+    modified: 1646819645003
+    created: 1646819645003
+    name: STARTHack2022
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_3e203c31739a4a5eb822a32fdbd420fb
+    parentId: wrk_3b1665ec8df04d0fb9f8b6ca2de3ac82
+    modified: 1646829387112
+    created: 1646819704824
+    url: https://data.cdn.development.srse.w4a.tv/epg/day/{% now 'custom',
+      'YYYY-MM-DD' %}/{% response 'body',
+      'req_d862b07971ba4a5da85aa594f25a2b1c', 'b64::JC5yZXN1bHRbMl0uaWQ=::46b',
+      'never', 60 %}/full.json
+    name: Get EPG by Day for Channel
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1646176305249.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6664e9cb3f23408c94d4f8b71eb75c84
+    parentId: wrk_3b1665ec8df04d0fb9f8b6ca2de3ac82
+    modified: 1646829374420
+    created: 1646819828983
+    url: https://data.cdn.development.srse.w4a.tv/epg/entry/{% response 'body',
+      'req_3e203c31739a4a5eb822a32fdbd420fb', 'b64::JC5yZXN1bHRbMTVdLmlk::46b',
+      'never', 60 %}/full.json
+    name: Get Detailed EPG
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1645854630443.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4eb66dca479247c6aa8cca3035dd0bec
+    parentId: wrk_3b1665ec8df04d0fb9f8b6ca2de3ac82
+    modified: 1646829578067
+    created: 1646829540742
+    url: https://data.cdn.development.srse.w4a.tv/assets/{% response 'body',
+      'req_6664e9cb3f23408c94d4f8b71eb75c84', 'b64::JC5hc3NldC5pZA==::46b',
+      'never', 60 %}/full.json
+    name: Get Detailed Asset
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1645774211741.6875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_bded754f5b29753ff0e1925b923412f93c291699
+    parentId: wrk_3b1665ec8df04d0fb9f8b6ca2de3ac82
+    modified: 1646819645023
+    created: 1646819645023
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1646819645023
+    _type: environment
+  - _id: jar_bded754f5b29753ff0e1925b923412f93c291699
+    parentId: wrk_3b1665ec8df04d0fb9f8b6ca2de3ac82
+    modified: 1646819645025
+    created: 1646819645025
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_fce31420ea514f9d962286e7bfdc5fdf
+    parentId: wrk_3b1665ec8df04d0fb9f8b6ca2de3ac82
+    modified: 1646819645005
+    created: 1646819645005
+    fileName: STARTHack2022
+    contents: ""
+    contentType: yaml
+    _type: api_spec
