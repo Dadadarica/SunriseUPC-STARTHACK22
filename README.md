@@ -22,7 +22,7 @@ Our expected final solution would be an accurate manner to suggest content to th
 At the end the "new way of content discovery" is up to you to find a solution for ;) Think out of the box! Get crazy ;)
 
 ### Case Pitch
-Insert your Pitch Video or Slides here
+`Elevator Pitch.pdf`
 
 ### Deep Dive Slides
 https://docs.google.com/presentation/d/1jNBWGCI1dU6rP3JpnkAufXT_Jb1VIU7V4iZ-qCyAG0I/edit?usp=sharing
